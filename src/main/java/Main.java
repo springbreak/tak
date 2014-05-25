@@ -19,7 +19,7 @@ class Main {
 
 		User user2 = dao.get(user.getId());
 		System.out.println(user2.getName());
-
+		// this is comment
 		System.out.println(user2.getPassword());
 
 		System.out.println(user2.getId() + " 조회 성공");
