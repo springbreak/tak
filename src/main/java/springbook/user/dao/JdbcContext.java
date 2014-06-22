@@ -11,7 +11,8 @@ public class JdbcContext {
 	private DataSource dataSource;
 
 	public void setDataSource(DataSource dataSource) {
-		this.dataSource = dataSource;
+		//this.dataSource = dataSource;
+
 	}
 
 	public void executeSql(final String query) throws SQLException {
