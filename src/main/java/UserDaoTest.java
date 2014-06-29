@@ -154,7 +154,28 @@ public class UserDaoTest {
 			SQLExceptionTranslator set =
 					new SQLErrorCodeSQLExceptionTranslator(this.dataSource);
 			//assertThat(set.translate(null, null, sqlEx), is(DuplicateKeyException.class));
+		}
 	}
+	
+	@Test
+	public void update(){
+		dao.deleteAll();
+		
+		dao.add(user1);
+		dao.add(user2);
+		
+		user1.setName("오민규");
+		user1.setPassword("springno6");
+		user1.setLevel(Level.GOLD);
+		user1.setLogin(1000);
+		user1.setRecommend(999);
+		
+		dao.update(user1);
+		
+		User user1update = dao.get(user1.getId());
+		checkSameUser(user1, user1update);
+		User user2same = dao.get(user2.getId());
+		checkSameUser(user2, user2same);
 	}
 }
 	

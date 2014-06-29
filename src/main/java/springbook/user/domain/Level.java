@@ -1,14 +1,25 @@
 package springbook.user.domain;
 
+import org.apache.log4j.varia.LevelMatchFilter;
+
 public enum Level {
-	BASIC(1), SILVER(2), GOLD(3);
-	private final int value;
+	  GOLD(3, null), SILVER(2, GOLD), BASIC(1,SILVER);
 	
-	Level(int value){
+	private final int value;
+	private final Level next;
+	
+	
+	Level(int value, Level next){
 		this.value = value;
+		this.next = next;
 	}
+	
 	public int intValue(){
 		return value;
+	}
+	
+	public Level nextLevel(){
+		return this.next;
 	}
 	
 	public static Level valueOf(int value){

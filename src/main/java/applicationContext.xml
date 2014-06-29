@@ -16,5 +16,11 @@
 	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
 	    <property name="dataSource" ref="dataSource"/>
 	</bean>
+	
+	<bean id="userService" class="springbook.user.service.UserService">
+	    <property name="userDao" ref="userDao" />
+	</bean>
+	
+	
 
 </beans>
