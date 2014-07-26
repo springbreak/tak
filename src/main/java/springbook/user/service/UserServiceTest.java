@@ -44,13 +44,12 @@ public class UserServiceTest {
 
 	@Before
 	public void setUp() {
-		users = Arrays.asList(new User("abcd", "가나다", "p1", Level.BASIC,
-				MIN_LOGCOUNT_FOR_SILVER - 1, 0), new User("bvcd", "나다라", "p2",
-				Level.BASIC, MIN_LOGCOUNT_FOR_SILVER, 0), new User("cdfd",
-				"다라마", "p3", Level.SILVER, 60, MIN_RECOMMEND_FOR_GOLD - 1),
-				new User("ddfdf", "라라라", "p4", Level.SILVER, 60,
-						MIN_RECOMMEND_FOR_GOLD), new User("egfg", "마마마", "p5",
-						Level.GOLD, 100, Integer.MAX_VALUE));
+		users = Arrays.asList(
+				new User("abcd", "가나다", "p1", Level.BASIC, 	MIN_LOGCOUNT_FOR_SILVER - 1, 0, "njir@naver.com"), 
+				new User("bvcd", "나다라", "p2", Level.BASIC, MIN_LOGCOUNT_FOR_SILVER, 0, "njir@naver.com"), 
+				new User("cdfd", "다라마", "p3", Level.SILVER, 60, MIN_RECOMMEND_FOR_GOLD - 1, "njir@naver.com"),
+				new User("ddfdf", "라라라", "p4", Level.SILVER, 60, MIN_RECOMMEND_FOR_GOLD, "njir@naver.com"), 
+				new User("egfg", "마마마", "p5", Level.GOLD, 100, Integer.MAX_VALUE, "njir@naver.com"));
 	}
 
 	 @Test
